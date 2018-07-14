@@ -10,16 +10,18 @@
 
 <ion-content padding>
 
-  <form #myForm="ngForm" (ngSubmit)="gotasTotales()">
+  <form #myForm="ngForm" (ngSubmit)="resultado()">
 
     <ion-grid>
+
       <ion-row>
         <ion-col col-6>
           <ion-item>
             <ion-label floating>ml</ion-label>
-            <ion-input type="number" [(ngModel)]="data.ml" name="ml" [placeholder]="data.ml" required></ion-input>
+            <ion-input type="number" [(ngModel)]="data.ml" name="ml" required></ion-input>
           </ion-item>
         </ion-col>
+        
         <ion-col col-6>
           <ion-item>
             <ion-label floating>horas</ion-label>
@@ -27,6 +29,7 @@
           </ion-item>
         </ion-col>
       </ion-row>
+
       <ion-row>
         <ion-col>
           <ion-list radio-group [(ngModel)]="data.constante" name="constante" required>
@@ -62,6 +65,7 @@
           </button>
         </ion-col>
       </ion-row>
+      
     </ion-grid>
 
   </form>

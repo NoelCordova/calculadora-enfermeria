@@ -9,5 +9,69 @@
 
 
 <ion-content padding>
-  <h3>Uresis</h3>
+
+  <form #myForm="ngForm" (ngSubmit)="resultado()">
+
+    <ion-grid>
+
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label floating>orina</ion-label>
+            <ion-input type="number" [(ngModel)]="data.orina" name="orina" required></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label floating>peso</ion-label>
+            <ion-input type="number" [(ngModel)]="data.peso" name="peso" required></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label floating>horas</ion-label>
+            <ion-input type="number" [(ngModel)]="data.horas" name="horas" required></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      
+      <br>
+      <ion-row>
+        <ion-col col-2>
+          <button ion-button outline color="danger" type="button" block (click)="borrarResultado()">
+            <ion-icon name="md-trash"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col col-8>
+          <button [disabled]="!myForm.form.valid" ion-button type="submit" block>Calcular</button>
+        </ion-col>
+        <ion-col col-2>
+          <button ion-button outline color="secondary" type="button" block (click)="mostrarFormula()">
+            <ion-icon name="md-help"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+      
+    </ion-grid>
+
+  </form>
+
+  <br>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngIf="data.resultado != 0">
+        <hr>
+        <h3>Resultado</h3>
+        <h5>{{ data.resultado | number }}</h5>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>

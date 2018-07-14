@@ -19,6 +19,11 @@ export class ConteoGotasPage {
 
   ionViewDidLoad() { }
 
+  resultado() {
+    console.log("Entry data:", this.data);
+    return this.data.resultado = parseInt(this.data.ml) / parseInt(this.data.horas) / parseInt(this.data.constante);
+  }
+
   mostrarFormula() {
     let list = "<p>Microgotero = 1</p><p>Normogotero = 3</p><p>Macrogotero = 4</p>"
 
@@ -29,11 +34,6 @@ export class ConteoGotasPage {
       buttons: ['Back']
     });
     alert.present()
-  }
-
-  gotasTotales() {
-    console.log("Entry data:", this.data);
-    return this.data.resultado = parseInt(this.data.ml) / parseInt(this.data.horas) / parseInt(this.data.constante);
   }
 
   borrarResultado() {
