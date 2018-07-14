@@ -5,13 +5,39 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
+  <!-- <ion-content>
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         <ion-icon [name]="p.icon" item-start></ion-icon>
         {{p.title}}
       </button>
     </ion-list>
+  </ion-content> -->
+
+  <ion-content>
+
+    <ion-list no-border>
+      <ion-list-header>
+        App Options
+      </ion-list-header>
+  
+      <button menuClose ion-item *ngFor="let option of options" (click)="openPage(option)">
+        <ion-icon [name]="option.icon" item-start></ion-icon>
+        {{ option.title }}
+      </button>
+    </ion-list>  
+
+    <ion-list>
+      <ion-list-header>
+        Sections
+      </ion-list-header>
+
+      <button menuClose ion-item *ngFor="let section of sections" (click)="openPage(section)">
+        <ion-icon [name]="section.icon" item-start></ion-icon>
+        {{ section.title }}
+      </button>
+    </ion-list>
+
   </ion-content>
 
 </ion-menu>

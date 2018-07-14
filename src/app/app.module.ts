@@ -5,6 +5,8 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { PerdidasInsensiblesPage } from '../pages/perdidas-insensibles/perdidas-insensibles';
+import { GananciasEndogenasPage } from '../pages/ganancias-endogenas/ganancias-endogenas';
+import { UresisHorariaPage } from '../pages/uresis-horaria/uresis-horaria'
 import { ConteoGotasPage } from '../pages/conteo-gotas/conteo-gotas';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -15,6 +17,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     PerdidasInsensiblesPage,
+    GananciasEndogenasPage,
+    UresisHorariaPage,
     ConteoGotasPage
   ],
   imports: [
@@ -26,6 +30,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     PerdidasInsensiblesPage,
+    GananciasEndogenasPage,
+    UresisHorariaPage,
     ConteoGotasPage
   ],
   providers: [
