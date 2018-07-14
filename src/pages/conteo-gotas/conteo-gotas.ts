@@ -20,9 +20,12 @@ export class ConteoGotasPage {
   ionViewDidLoad() { }
 
   mostrarFormula() {
+    let list = "<p>Microgotero = 1</p><p>Normogotero = 3</p><p>Macrogotero = 4</p>"
+
     let alert = this.alertCtrl.create({
       title: 'Formula',
-      message: 'ml / horas / [constante]',
+      subTitle: 'ml / horas / [constante]',
+      message: list,
       buttons: ['Back']
     });
     alert.present()
