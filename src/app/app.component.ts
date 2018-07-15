@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { PerdidasInsensiblesPage } from '../pages/perdidas-insensibles/perdidas-insensibles';
 import { GananciasEndogenasPage } from '../pages/ganancias-endogenas/ganancias-endogenas';
 import { UresisHorariaPage } from '../pages/uresis-horaria/uresis-horaria'
+import { PerdidaInsensibleLactantePage } from '../pages/perdida-insensible-lactante/perdida-insensible-lactante'
 import { ConteoGotasPage } from '../pages/conteo-gotas/conteo-gotas';
 
 @Component({
@@ -29,10 +30,11 @@ export class MyApp {
     ];
 
     this.sections = [
-      { title: 'Perdidas', component: PerdidasInsensiblesPage, icon: 'md-trending-down' },
-      { title: 'Ganancias', component: GananciasEndogenasPage, icon: 'md-trending-up' },
-      { title: 'Uresis', component: UresisHorariaPage, icon: 'md-flask' },
-      { title: 'Conteo', component: ConteoGotasPage, icon: 'md-water' }
+      { title: 'Pérdidas Insensibles', component: PerdidasInsensiblesPage, icon: 'md-trending-down' },
+      { title: 'Ganancias Endógenas', component: GananciasEndogenasPage, icon: 'md-trending-up' },
+      { title: 'Uresis Horaria', component: UresisHorariaPage, icon: 'md-flask' },
+      { title: 'Pérdida Insensible Lactante', component: PerdidaInsensibleLactantePage, icon: 'md-pint' },
+      { title: 'Goteo', component: ConteoGotasPage, icon: 'md-water' }
     ];
 
   }

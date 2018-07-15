@@ -12,7 +12,8 @@ export class ConteoGotasPage {
     ml: '',
     horas: '',
     constante: '',
-    resultado: 0
+    resultado1: 0,
+    resultado2: 0
   }
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) { }
@@ -21,23 +22,36 @@ export class ConteoGotasPage {
 
   resultado() {
     console.log("Entry data:", this.data);
-    return this.data.resultado = parseInt(this.data.ml) / parseInt(this.data.horas) / parseInt(this.data.constante);
+
+    this.data.resultado1 = parseInt(this.data.ml) / parseInt(this.data.horas) / parseInt(this.data.constante);
+    this.data.resultado2 = parseInt(this.data.ml) / parseInt(this.data.horas) / 60;
+
+    return this.data.resultado1, this.data.resultado2;
   }
 
   mostrarFormula() {
-    let list = "<p>Microgotero = 1</p><p>Normogotero = 3</p><p>Macrogotero = 4</p>"
+    let subTitle = "<p>gts/min = ml / horas / [constante]</p><p>ml/min = ml / horas / 60</p>"
+    let message = "<h6>[Constantes]</h6><p>Microgotero = 1</p><p>Normogotero = 3</p><p>Macrogotero = 4</p>"
 
     let alert = this.alertCtrl.create({
-      title: 'Formula',
-      subTitle: 'ml / horas / [constante]',
-      message: list,
+      title: 'Fórmula',
+      subTitle,
+      message,
       buttons: ['Back']
     });
     alert.present()
   }
 
   borrarResultado() {
-    return this.data.ml = '', this.data.horas = '', this.data.constante = '', this.data.resultado = 0;
+    this.data = {
+      ml: '',
+      horas: '',
+      constante: '',
+      resultado1: 0,
+      resultado2: 0
+    }
+
+    return this.data;
   }
 
 }

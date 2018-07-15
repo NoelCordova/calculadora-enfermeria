@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Conteo Gotas</ion-title>
+    <ion-title>Goteo</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -73,10 +73,11 @@
   <br>
   <ion-grid>
     <ion-row>
-      <ion-col *ngIf="data.resultado != 0">
+      <ion-col *ngIf="data.resultado1 != 0 && data.resultado2 != 0">
         <hr>
         <h3>Resultado</h3>
-        <h5>{{ data.resultado | number }}</h5>
+        <h6>{{ data.resultado1 | number }} <span>gts/min</span></h6>
+        <h6>{{ data.resultado2 | number }} <span>ml/min</span></h6>
       </ion-col>
     </ion-row>
   </ion-grid>

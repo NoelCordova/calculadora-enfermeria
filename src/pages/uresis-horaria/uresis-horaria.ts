@@ -26,7 +26,7 @@ export class UresisHorariaPage {
 
   mostrarFormula() {
     let alert = this.alertCtrl.create({
-      title: 'Formula',
+      title: 'Fórmula',
       subTitle: 'orina / peso / horas',
       buttons: ['Back']
     });

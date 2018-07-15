@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { PerdidasInsensiblesPage } from '../pages/perdidas-insensibles/perdidas-insensibles';
 import { GananciasEndogenasPage } from '../pages/ganancias-endogenas/ganancias-endogenas';
 import { UresisHorariaPage } from '../pages/uresis-horaria/uresis-horaria'
+import { PerdidaInsensibleLactantePage } from '../pages/perdida-insensible-lactante/perdida-insensible-lactante'
 import { ConteoGotasPage } from '../pages/conteo-gotas/conteo-gotas';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -19,6 +20,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PerdidasInsensiblesPage,
     GananciasEndogenasPage,
     UresisHorariaPage,
+    PerdidaInsensibleLactantePage,
     ConteoGotasPage
   ],
   imports: [
@@ -32,6 +34,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PerdidasInsensiblesPage,
     GananciasEndogenasPage,
     UresisHorariaPage,
+    PerdidaInsensibleLactantePage,
     ConteoGotasPage
   ],
   providers: [
